@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  font-family: 'Figtree Medium';
+  font-display: swap;
+  src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'Figtree ExtraBold';
+  font-display: swap;
+  src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+  background-color: var(--yellow);
+  font-size: 1rem;
+  color: var(--gray-950);
+  font-family: 'Figtree Medium', sans-serif;
+}
+
+.blog-card__wrapper {
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  width: 20.43rem;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 0 #000000;
+  border: 1px solid #111111;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.625rem;
+}
+
+section {
+  margin-top: 1.5rem;
+}
+
+.blog-card__tag {
+  background-color: var(--yellow);
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  font-family: 'Figtree ExtraBold', sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card__date {
+  font-family: 'Figtree Medium', sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card__title {
+  font-family: 'Figtree ExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 150%;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card__description {
+  font-family: 'Figtree Medium', sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  margin-bottom: 1.5rem;
+  color: var(--gray-500);
+}
+
+.blog-card__author {
+  display: flex;
+  align-items: center;
+}
+
+.blog-card__author img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+
+.blog-card__author h2 {
+  font-family: 'Figtree ExtraBold', sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+
+@media only screen and (min-width: 64rem) {
+  .blog-card__wrapper {
+    width: 24rem;
+  }
+
+  .blog-card__tag, .blog-card__date {
+    font-size: 0.875rem;
+  }
+
+  .blog-card__title {
+    font-size: 1.5rem;
+  }
+
+  .blog-card__description {
+    font-size: 1rem;
+  }
+}
